@@ -1,16 +1,11 @@
 import { posts } from '#site/content';
-import dayjs from 'dayjs';
-import Link from 'next/link';
+import PostItem from '@/components/post-item';
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       {posts.map((post) => (
-        <Link key={post.slug} href={`/posts/${post.slug}`}>
-          <h1>{post.title}</h1>
-          <p>{dayjs(post.date).format('YYYY-MM-DD')}</p>
-          <p>{post.metadata.readingTime}m</p>
-        </Link>
+        <PostItem key={post.slug} {...post} />
       ))}
     </div>
   );
