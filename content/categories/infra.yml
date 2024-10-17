@@ -1,0 +1,6 @@
+name: Infra
+slug: infra
+description: 인프라 관련 학습 내용을 정리합니다.
+meta:
+  title: Infra
+  description: Docker, Kubernetes, AWS, CI/CD, 네트워크, 보안, 모니터링 등

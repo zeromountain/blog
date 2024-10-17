@@ -1,0 +1,7 @@
+name: Frontend
+slug: frontend
+# cover: journal.webp
+description: 프론트엔드 관련 학습 내용을 정리합니다.
+meta:
+  title: Frontend
+  description: React, Next.js, TypeScript, TailwindCSS, etc.
