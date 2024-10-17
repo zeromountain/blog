@@ -10,8 +10,6 @@ import { cn } from '@/lib/utils';
 export default function Navigation() {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <NavigationMenu className="h-16 w-full">
       <NavigationMenuList>
