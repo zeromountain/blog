@@ -3,16 +3,17 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './ui/navigation-menu';
 import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
+
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './ui/navigation-menu';
 
 export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu className="h-16 w-full">
-      <NavigationMenuList>
+    <NavigationMenu className="flex w-full min-w-full justify-start py-6">
+      <NavigationMenuList className="h-full">
         {[
           { label: 'home', href: '/' },
           { label: 'about', href: '/about' },
@@ -23,8 +24,8 @@ export default function Navigation() {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  'font-medium hover:font-bold',
-                  pathname.includes(href) && 'font-bold',
+                  'text-md font-medium hover:font-bold',
+                  pathname === href && 'font-bold',
                 )}
               >
                 {label}

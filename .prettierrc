@@ -4,14 +4,12 @@
   "singleQuote": true,
   "printWidth": 120,
   "tabWidth": 2,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   "importOrder": [
     "^react$",
     "^next(/.*)?$",
-    "^(third-party|)",
+    "^(third-party|react-markdown|react-syntax-highlighter)",
+    "^(third-party|remark-gfm|rehype-raw|rehype-slug|unified)",
     "^@/(.*)$",
     "^((./|../).*)$"
   ],
