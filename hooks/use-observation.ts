@@ -44,7 +44,9 @@ const useObservation = (setState: Dispatch<SetStateAction<string>>, headingEleme
       observe.observe(header);
     });
 
-    return () => observe.disconnect();
+    return () => {
+      observe.disconnect();
+    };
   }, [headingElements]);
 };
 
