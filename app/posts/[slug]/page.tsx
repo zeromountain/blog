@@ -1,6 +1,10 @@
+
+
 import { posts } from "#site/content";
+import Preview from "@/components/preview";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+
 
 interface PostPageProps {
   params: {
@@ -14,12 +18,12 @@ export default function PostPage({ params }: PostPageProps) {
   if(!post) notFound();
 
   return (
-    <article>
+    <article className="p-4">
       <h1>{post.title}</h1>
       {post.description && <p>{post.description}</p>}
       {post.cover && <Image src={post.cover} alt={post.title} placeholder="blur" />}
       <hr className="my-4" />
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <Preview source={post.content} />
     </article>
   )
 }
